@@ -1,24 +1,21 @@
-# Labosphere
+# Tengen
 
-Labosphere generates [Cubari](https://cubari.moe) repositories for *One Piece* releases by [VIZ Media](https://viz.com) (chapters 1-998)
-and [TCB Scans](https://tcbscans.com) (chapters 999+).
+Tengen is based on the "Labosphere" in the repository this one is forked from. It generates [Cubari](https://cubari.moe) repositories for *Jujutsu Kaisen* releases by [TCB Scans](https://tcbscans.com).
 
 It retrieves chapter metadata in reverse sequential order, beginning with the latest chapter and ending with Chapter 1.
 It then uses this metadata to compose a JSON file which can be provided to Cubari as-is.
 
-The technically inclined are welcome to run Labosphere themselves:
+The technically inclined are welcome to run Tengen themselves:
 
 ```bash
-docker run -v ${PWD}/labosphere:/labosphere -t ghcr.io/celsiusnarhwal/labosphere:latest
+docker run -v ${PWD}/tengen:/tengen -t ghcr.io/mcradcliffe/tengen:latest
 ```
 
 Or, if you prefer the hard way (Python 3.11 or later and [Poetry](https://python-poetry.org) required):
 
 ```bash
-git clone https://github.com/celsiusnarhwal/punk-records
-cd punk-records/labosphere
+git clone https://github.com/mcradcliffe/hidden-inventory
+cd hidden-inventory/tengen
 poetry install --only main
-poetry run labosphere start
+poetry run tengen start
 ```
-
-Be advised that Labosphere offers no changelogs or version guarantees.
