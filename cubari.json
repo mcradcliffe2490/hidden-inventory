@@ -1,0 +1,18 @@
+{
+    "title": "Jujutsu Kaisen",
+    "description": "Yuuji, a student at Sugisawa Town #3 High School, happens to be ultra-talented at track and field… But since he has no interest in running around in circles, he’s happy as a clam being a member of the Occult Research Club! Although he only joined up for kicks, things start to get serious when an actual spirit shows up at the school.",
+    "artist": "Gege Akutami",
+    "author": "Gege Akutami",
+    "cover": "https://cdn.myanimelist.net/images/manga/3/210341.jpg",
+    "chapters": {
+        "0": {
+            "title": "About This Repository",
+            "groups": {
+                "celsius narhwal": [
+                    "https://raw.githubusercontent.com/celsiusnarhwal/punk-records/main/about.png"
+                ]
+            },
+            "volume": 0
+        }
+    }
+}
