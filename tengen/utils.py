@@ -10,16 +10,16 @@ from fake_useragent import UserAgent
 from path import Path
 from requests import Response
 
-from labosphere.constants import BASE_URL, DEV_MODE, LABOSPHERE_DIR, ROOT
+from tengen.constants import BASE_URL, DEV_MODE, TENGEN_DIR, ROOT
 
 
 def base_metadata() -> dict:
     return {
-        "title": "One Piece",
-        "description": (LABOSPHERE_DIR / "description.txt").read_text(),
-        "artist": "Eiichiro Oda",
-        "author": "Eiichiro Oda",
-        "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+        "title": "Jujutsu Kaisen",
+        "description": (TENGEN_DIR / "description.txt").read_text(),
+        "artist": "Gege Akutami",
+        "author": "Gege Akutami",
+        "cover": "https://cdn.myanimelist.net/images/manga/3/210341.jpg",
         "chapters": {
             "0": {
                 "title": "About This Repository",
@@ -46,7 +46,7 @@ def get_soup(url: str) -> BeautifulSoup:
 
 
 def get_chapter_list() -> ResultSet:
-    return get_soup(BASE_URL / "mangas/5/one-piece").find_all(
+    return get_soup(BASE_URL / "mangas/4/jujutsu-kaisen").find_all(
         "a", href=lambda href: href and "chapter" in href
     )
 

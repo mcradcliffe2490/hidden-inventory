@@ -4,7 +4,7 @@ from rich import print
 from rich.markdown import Markdown
 from rich.panel import Panel
 
-from labosphere.constants import ROOT
+from tengen.constants import ROOT
 
 
 @decorator

@@ -11,4 +11,4 @@ WORKDIR /app
 RUN curl -sSL https://install.python-poetry.org | python - --version=$(cat .poetry-version) && \
     poetry install --only main
 
-ENTRYPOINT ["poetry", "run", "labosphere", "start"]
+ENTRYPOINT ["poetry", "run", "tengen", "start"]

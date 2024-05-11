@@ -1,7 +1,7 @@
 *
 
 !.poetry-version
-!labosphere/
+!tengen/
 !poetry.lock
 !pyproject.toml
 !LICENSE.md

@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "labosphere"
+name = "tengen"
 version = "1.0.0"
 description = "A Cubari repo generator for One Piece"
 authors = ["celsius narhwal <hello@celsiusnarhwal.dev>"]
 readme = "README.md"
-packages = [{ include = "labosphere" }]
+packages = [{ include = "tengen" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -20,8 +20,8 @@ tomlkit = "^0.12.1"
 pendulum = "^3.0.0"
 
 [tool.poetry.scripts]
-labosphere = "labosphere.cli:app"
-lbs = "labosphere.cli:app"
+tengen = "tengen.cli:app"
+lbs = "tengen.cli:app"
 
 [tool.black]
 line-length = 88

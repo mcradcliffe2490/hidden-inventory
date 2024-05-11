@@ -9,8 +9,8 @@ from dict_deep import deep_set
 from path import Path
 from rich import print
 
-from labosphere import callbacks, utils
-from labosphere.constants import BASE_URL, DOCKER, GITHUB_ACTIONS, LABOSPHERE_DIR
+from tengen import callbacks, utils
+from tengen.constants import BASE_URL, DOCKER, GITHUB_ACTIONS, TENGEN_DIR
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -42,18 +42,18 @@ def start(
     timeout: int = typer.Option(
         None,
         min=0,
-        help="Labosphere will exit after requesting this many consecutive chapters "
+        help="Tengen will exit after requesting this many consecutive chapters "
         "with no changes.",
     ),
 ):
     """
-    Run Labosphere.
+    Run Tengen.
     """
     chapter_pool = utils.get_chapter_list()
     latest_chapter = float(utils.get_chapter_number(chapter_pool[0]))
     start_from = start_from or latest_chapter
-    viz_titles = toml.load((LABOSPHERE_DIR / "titles.toml").open())
-    volumes = toml.load((LABOSPHERE_DIR / "volumes.toml").open())
+    viz_titles = toml.load((TENGEN_DIR / "titles.toml").open())
+    volumes = toml.load((TENGEN_DIR / "volumes.toml").open())
 
     if start_from > latest_chapter:
         raise typer.BadParameter(
@@ -94,7 +94,7 @@ def start(
             or viz_titles[str(utils.truncate(chapter_number))]
         )
 
-        translation_group = "VIZ Media" if chapter_number < 999 else "TCB Scans"
+        translation_group = "TCB Scans"
 
         soup = utils.get_soup(BASE_URL / chapter.get("href").lstrip("/"))
         pages = soup.find_all(
@@ -161,10 +161,10 @@ def start(
         time.sleep(cooldown)
 
     if timeout and updated_chapters >= timeout and GITHUB_ACTIONS:
-        print("LABOSPHERE_FLAG_PR=1", file=open(os.getenv("GITHUB_ENV"), "a"))
+        print("TENGEN_FLAG_PR=1", file=open(os.getenv("GITHUB_ENV"), "a"))
 
     if DOCKER:
-        mount = Path("/labosphere")
+        mount = Path("/tengen")
         mount.mkdir_p()
         (mount / "cubari.json").write_text(utils.cubari_path().read_text())
         exit()
@@ -172,20 +172,20 @@ def start(
 
 # noinspection PyUnusedLocal
 @app.callback(
-    epilog=f"Labosphere © {pendulum.now().year} celsius narhwal. Thank you kindly for your attention."
+    epilog=f"Tengen © {pendulum.now().year} celsius narhwal. Thank you kindly for your attention."
 )
 def main(
     license: bool = typer.Option(
         None,
         "--license",
         is_eager=True,
-        help="View Labosphere's license.",
+        help="View Tengen's license.",
         callback=callbacks.license,
-        rich_help_panel="About Labosphere",
+        rich_help_panel="About Tengen",
     ),
 ):
     """
-    Labosphere generates Cubari repositories for TCB Scans' One Piece releases.
+    Tengen generates Cubari repositories for TCB Scans' One Piece releases.
     """
 
 
