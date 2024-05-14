@@ -83,6 +83,9 @@ def start(
     for chapter in chapter_pool:
         chapter_number = utils.get_chapter_number(chapter)
 
+        if chapter_number.is_integer() is false:
+            continue
+
         if explicit_chapters and chapter_number not in explicit_chapters:
             continue
 
