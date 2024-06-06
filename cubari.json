@@ -5,8 +5,26 @@
     "author": "Gege Akutami",
     "cover": "https://cdn.myanimelist.net/images/manga/3/210341.jpg",
     "chapters": {
-        "261": {
+        "262": {
             "title": "The Decisive Battle in the Uninhabited, Demon-Infested Shinjuku \u325e",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/jjk_262_344_008.png"
+                ]
+            },
+            "volume": "28",
+            "last_updated": 1717710984
+        },
+        "261": {
+            "title": "The Decisive Battle in the Uninhabited, Demon-Infested Shinjuku \u325d",
             "groups": {
                 "TCB Scans": [
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/JJK_261_34_001.png",
@@ -29,7 +47,7 @@
                 ]
             },
             "volume": "28",
-            "last_updated": 1716544595
+            "last_updated": 1717710987
         },
         "260": {
             "title": "The Decisive Battle in the Uninhabited, Demon-Infested Shinjuku \u325c",
