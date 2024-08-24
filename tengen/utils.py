@@ -20,17 +20,6 @@ def base_metadata() -> dict:
         "artist": "Gege Akutami",
         "author": "Gege Akutami",
         "cover": "https://cdn.myanimelist.net/images/manga/3/210341.jpg",
-        "chapters": {
-            "0": {
-                "title": "About This Repository",
-                "groups": {
-                    "celsius narhwal": [
-                        "https://raw.githubusercontent.com/celsiusnarhwal/punk-records/main/about.png"
-                    ]
-                },
-                "volume": 0,
-            }
-        },
     }
 
 
@@ -78,11 +67,6 @@ def load_cubari() -> dict:
 
     cubari = json.load(cubari_path().open())
     cubari.update(without_keys(base_metadata(), "chapters"))
-
-    try:
-        cubari["chapters"].update(base_metadata()["chapters"])
-    except KeyError:
-        cubari["chapters"] = base_metadata()["chapters"]
 
     dump_cubari(cubari)
 
