@@ -7870,15 +7870,6 @@
             },
             "volume": "1",
             "last_updated": 1715706992
-        },
-        "0": {
-            "title": "About This Repository",
-            "groups": {
-                "celsius narhwal": [
-                    "https://raw.githubusercontent.com/celsiusnarhwal/punk-records/main/about.png"
-                ]
-            },
-            "volume": 0
         }
     }
 }
